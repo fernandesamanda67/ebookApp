@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="title">Search</div>
+  <ion-searchbar placeholder="" [(ngModel)]="searchTerm" (change)="search($event)"></ion-searchbar>
+</ion-content>

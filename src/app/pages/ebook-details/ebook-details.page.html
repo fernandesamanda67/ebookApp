@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>      
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="informations">{{ informations.trackName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="details-title">Publisher Description</div>
+
+  <ion-label>Label</ion-label>
+
+  <ion-list *ngIf="informations">
+    <ion-item>
+
+      <div class="description" [innerHTML]="informations.description"></div>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,36 @@
+.title {
+    font-size: 12px;
+}
+
+.subtitle {
+    font-size: 10px;
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    color: gray;
+}
+
+.ebook-img {
+    box-shadow: 0px 5px 5px 0px #ccc;
+    -moz-box-shadow: 0px 5px 5px 0px #ccc;
+    -webkit-box-shadow: 0px 5px 5px 0px #ccc;
+    -khtml-box-shadow: 0px 5px 5px 0px #ccc;
+}
+
+.ion-item {
+    --min-height: 100px;
+}
+
+.no-record-found {
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+img {
+    width: auto !important;
+}
+
+.ion-label {
+    min-height: 60px !important;
+}

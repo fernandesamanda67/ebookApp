@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>      
+      <ion-back-button text="Search">Search</ion-back-button>
+    </ion-buttons>
+    <ion-title>In Your Library</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngIf="results">
+    <ion-item button class="ion-item" *ngFor="let item of results" [routerLink]="['/', 'ebook-details', item.trackId]" >
+      
+      <ion-thumbnail>
+        <img class="ebook-img" [src]="item.artworkUrl100" *ngIf="item.artworkUrl100 != ''"/>
+      </ion-thumbnail>
+
+      <ion-label>
+        <div class="title">{{item.trackName}}</div>
+        <div class="subtitle">{{item.artistName}}</div>
+      </ion-label>
+
+    </ion-item>
+  </ion-list>
+
+  <div class="no-record-found" *ngIf="results.length === 0">No record found</div>
+
+</ion-content>
