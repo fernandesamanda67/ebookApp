@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { AppComponent } from './app.component';
 import { SearchPage } from 'src/app/pages/search/search.page';
@@ -25,7 +26,9 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule, 
     CommonModule, 
     FormsModule,
-    ReactiveFormsModule,],
+    ReactiveFormsModule,
+    IonicStorageModule.forRoot(),
+  ],
   providers: [
     StatusBar,
     SplashScreen,
