@@ -1,13 +1,24 @@
 .details-title {
     font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin-left: 15px;
 }
 
-.description {
-    font-size: 13px;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
+.short-text {
+    flex: 1;
+    width: inherit;
+    height: 100px;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    text-align: justify-all;
+}
+
+.long-text {
+    width: auto;
+    text-align: justify-all;
+}
+
+button {
+    background: transparent !important;
+    font-weight: bold;
 }

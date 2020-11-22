@@ -12,8 +12,9 @@ import { StorageService } from 'src/app/services/storage.service';
 export class EbookDetailsPage implements OnInit {
 
   informations = null;
+  showEllipsis = true;
 
-  constructor(private activatedRoute: ActivatedRoute, private ebookService: EbookService, public storageService: StorageService) { }
+  constructor(private activatedRoute: ActivatedRoute, private ebookService: EbookService, public storageService: StorageService) {}
 
   ngOnInit() {
 

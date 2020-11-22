@@ -9,16 +9,28 @@
 
 <ion-content>
 
-  <div class="details-title">Publisher Description</div>
-
-  <ion-label>Label</ion-label>
-
   <ion-list *ngIf="informations">
-    <ion-item>
 
-      <div class="description" [innerHTML]="informations.description"></div>
+      <p class="details-title">Publisher Description</p>
+      
+      <ion-item>
+        <div *ngIf="showEllipsis; else noEllipsis">
+          <div class="short-text">
+            <span *nestedEllipsis="true; indicator moreAnchor" [innerHTML]="informations.description"></span>
+            <ng-template #moreAnchor>
+              <button (click)="showEllipsis = false">... More</button>
+            </ng-template>
+          </div>
+        </div>
 
-    </ion-item>
+        <ng-template #noEllipsis>
+          <div class="long-text">
+            <span [innerHTML]="informations.description"></span>
+            <button (click)="showEllipsis = true">Less</button>
+          </div>
+        </ng-template>
+      </ion-item>
+
   </ion-list>
 
 </ion-content>
