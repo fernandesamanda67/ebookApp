@@ -11,7 +11,7 @@ const routes: Routes = [
     redirectTo: 'search',
     pathMatch: 'full'
   },
-  { path: 'ebooks/:search', 
+  { path: 'ebooks/:search',
     component: EbooksPage
   },
   {

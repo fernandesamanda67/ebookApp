@@ -17,12 +17,12 @@ export class EbookDetailsPage implements OnInit {
 
   ngOnInit() {
 
-    let id = this.activatedRoute.snapshot.paramMap.get('id');
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
 
     this.storageService.getObject(id).then(resultStorage => {
-      if (resultStorage != null) {        
+      if (resultStorage != null) {
         this.informations = resultStorage;
-      } else {        
+      } else {
         this.ebookService.getEbook(id).subscribe(result => {
           if (result) {
             this.informations = result[0];
@@ -30,7 +30,7 @@ export class EbookDetailsPage implements OnInit {
           }
         });
       }
-    }).catch(e => {      
+    }).catch(e => {
       this.ebookService.getEbook(id).subscribe(result => {
         if (result) {
           this.informations = result[0];
@@ -39,7 +39,7 @@ export class EbookDetailsPage implements OnInit {
       });
     });
   }
-  
+
   openWebsite() {
     window.open(this.informations.Website, '_blank');
   }

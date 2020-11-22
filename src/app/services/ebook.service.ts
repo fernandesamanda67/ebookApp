@@ -15,14 +15,14 @@ export class EbookService {
   searchData(searchValue: string): Observable<any> {
     return this.http.get(`${this.url}?term=${encodeURI(searchValue)}&entity=ebook`)
     .pipe(
-      map(response => response['results'])
+      map(response => response[`results`])
     );
   }
 
   getEbook(id: string): Observable<any> {
     return this.http.get(`${this.url}?term=${encodeURI(id)}&entity=ebook`)
     .pipe(
-      map(response => response['results'])
+      map(response => response[`results`])
     );
-  }  
+  }
 }

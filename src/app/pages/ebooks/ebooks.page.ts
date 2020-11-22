@@ -11,17 +11,17 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class EbooksPage implements OnInit {
 
-  results:[] = [];
+  results: [] = [];
 
   constructor(private ebookService: EbookService, private activatedRoute: ActivatedRoute, public storageService: StorageService) { }
 
   ngOnInit() {
-    let searchTerm = this.activatedRoute.snapshot.paramMap.get('search');
+    const searchTerm = this.activatedRoute.snapshot.paramMap.get('search');
 
     this.storageService.getObject(searchTerm).then(resultStorage => {
-      if (resultStorage != null) {        
+      if (resultStorage != null) {
         this.results = resultStorage;
-      } else {        
+      } else {
         this.ebookService.searchData(searchTerm).subscribe((ebooks) => {
           this.results = ebooks;
           this.storageService.setObject(searchTerm, this.results);

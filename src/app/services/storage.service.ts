@@ -7,16 +7,15 @@ import { Storage } from '@ionic/storage';
 
 export class StorageService {
     constructor(public storage: Storage) {}
-    
-    async setObject(key: string, object: Object) {
+    async setObject(key: string, object: object) {
         try {
             await this.storage.set(key, JSON.stringify(object));
             return true;
-        } catch (error) {            
+        } catch (error) {
             return false;
         }
     }
-    
+
     async getObject(key: string): Promise<any> {
         try {
             const result = await this.storage.get(key);
@@ -24,9 +23,9 @@ export class StorageService {
                 return JSON.parse(result);
             }
             return null;
-        } catch (error) {            
+        } catch (error) {
             return null;
         }
     }
-    
+
 }
