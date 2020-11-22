@@ -3,6 +3,14 @@
     font-weight: bold;
     color: black;
     margin-left: 15px;
+
+    @media only screen 
+    and (min-device-width: 1024px) 
+    and (max-device-width: 1366px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-height: 1320px) {
+        font-size: 24px;
+    }
 }
 
 .short-text {
@@ -11,11 +19,27 @@
     height: 100px;
     overflow: hidden;
     text-align: justify-all;
+
+    @media only screen 
+    and (min-device-width: 1024px) 
+    and (max-device-width: 1366px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-height: 1320px) {
+        font-size: 24px;
+    }
 }
 
 .long-text {
     width: auto;
     text-align: justify-all;
+
+    @media only screen 
+    and (min-device-width: 1024px) 
+    and (max-device-width: 1366px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (min-height: 1320px) {
+        font-size: 24px;
+    }
 }
 
 button {
