@@ -18,7 +18,4 @@ describe('EbookDetailsPage', () => {
     fixture.detectChanges();
   }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });
